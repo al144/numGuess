@@ -49,12 +49,11 @@ fun setMaxGuess() :Int?{
     try {
 
         maxGuess = Scanner(System.`in`).nextInt()
-        return maxGuess
     }catch (e :Exception){
 
         maxGuess = null
-        return maxGuess
     }
+    return maxGuess
 }
 
 fun main() {
@@ -62,14 +61,14 @@ fun main() {
     var inGame :Boolean = true
     val max :Int = setMax()
     var guesses :Int = 0
-    val maxGuess :Int? =setMaxGuess()
+    val maxGuess :Int? = setMaxGuess()
     val num :Int = numGen(max)
 
-    print("Guess the num between 1 and $max: ")
+    print("Guess the num between 0 and $max: ")
 
     while (inGame){
 
-        print("Guess the num between 0 and $max: ")
+        print("Guess the num between 1 and $max: ")
         var guess :Int = playerInput()
         if (guess == max){
             println("you won your num was $num and you guessed it right with $guesses guess")
@@ -86,6 +85,4 @@ fun main() {
             }
         }
     }
-
-
 }
