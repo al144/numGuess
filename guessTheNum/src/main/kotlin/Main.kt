@@ -55,7 +55,6 @@ fun setMaxGuess() :Int?{
         maxGuess = null
         return maxGuess
     }
-
 }
 
 fun main() {
@@ -69,7 +68,6 @@ fun main() {
     print("Guess the num between 1 and $max: ")
 
     while (inGame){
-
 
         print("Guess the num between 0 and $max: ")
         var guess :Int = playerInput()
