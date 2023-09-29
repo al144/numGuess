@@ -24,7 +24,7 @@ fun setMax() :Int{
 
 fun numGen(max :Int) :Int{
 
-    return Random.nextInt(0, max) + 1
+    return Random.nextInt(0, max + 1)
 }
 
 fun playerInput() :Int{
@@ -71,7 +71,7 @@ fun main() {
     while (inGame){
 
 
-        print("Guess the num between 1 and $max: ")
+        print("Guess the num between 0 and $max: ")
         var guess :Int = playerInput()
         if (guess == max){
             println("you won your num was $num and you guessed it right with $guesses guess")
